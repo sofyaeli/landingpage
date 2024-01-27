@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacciHastaElementos(numElementos) {
+    let fibonacci = [0, 1];  // Inicializamos la serie Fibonacci con los dos primeros elementos
+
+    for (let i = 2; i < numElementos; i++) {
+        let siguienteNumero = fibonacci[i - 1] + fibonacci[i - 2];
+        fibonacci.push(siguienteNumero);
+    }
+
+    return fibonacci;
+}
+
+
+let numElementos = 6;
+let serieFibonacci = fibonacciHastaElementos(numElementos);
+
+console.log(`Primeros ${numElementos} números de la serie Fibonacci:`);
+console.log(serieFibonacci.join(', '));
+    </script>
+</body>
+</html>
